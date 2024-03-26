@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "f4169c9d-d9b0-4a47-9a3c-077f93503dba",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30637716"
+	},
+	"item": [
+		{
+			"name": "CRUD_PESSOAS_CONTATOS",
+			"item": [
+				{
+					"name": "pessoas",
+					"item": [
+						{
+							"name": "todas_pessoas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/pessoas"
+							},
+							"response": []
+						},
+						{
+							"name": "cadastrar_pessoa",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \r\n        \"nome\": \"lucas 15\",\r\n        \"endereco\": \"endereço 1\",\r\n        \"cidade\": \"sao paulo\",\r\n        \"cep\": 12345678,\r\n        \"uf\": \"sp\"\r\n\r\n\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/pessoas"
+							},
+							"response": []
+						},
+						{
+							"name": "Atualizar_Dados_pessoa",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \r\n        \"nome\": \"atualizado 12\",\r\n        \"endereco\": \"endereço 2\",\r\n        \"cidade\": \"sao paulo\",\r\n        \"cep\": 12345678,\r\n        \"uf\": \"sp\"\r\n\r\n\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/pessoas/2"
+							},
+							"response": []
+						},
+						{
+							"name": "Deleta_pessoa_por_id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:8080/api/pessoas/3"
+							},
+							"response": []
+						},
+						{
+							"name": "contato_pessoa_por_id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/pessoas/2/contatos"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Contatos",
+					"item": [
+						{
+							"name": "CONTATO_POR_ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/pessoas/4/contatos"
+							},
+							"response": []
+						},
+						{
+							"name": "post_contato",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":0 ,\r\n    \"tipoContato\": 1,\r\n    \"contato\": \"1195\",\r\n    \"pessoa_id\":1\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/pessoas/1/contatos"
+							},
+							"response": []
+						},
+						{
+							"name": "Deleta_contato_id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:8080/api/contatos/1"
+							},
+							"response": []
+						},
+						{
+							"name": "Atualiza_contato",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \r\n    \"tipoContato\": 1,\r\n    \"contato\": \"1234789\"\r\n  \r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/contatos/1"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "maladireta",
+					"item": [
+						{
+							"name": "Maladireta",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":2 ,\r\n    \"tipoContato\": 0,\r\n    \"contato\": \"991\"\r\n    \r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/pessoas/maladireta/1"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
